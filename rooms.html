@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Don Elmer's Inn and Resort - Rooms & Cottages</title>
+  <link rel="icon" type="image/png" href="/image-amenities/logo123.png">
+  <link rel="stylesheet" href="design-css/topbar.css">
+  <link rel="stylesheet" href="css/rooms.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="top-navbar">
+      <div class="navbar-logo">
+        <a href="index.html" class="logo-link">
+          <img src="/imagelogo/logo.png" alt="Don Elmer's Logo" class="logo-image">
+          <span class="logo-text">Don Elmer's</span>
+        </a>
+      </div>
+      <nav class="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="rooms.html">Rooms</a></li>
+          <li><a href="amenities.html">Amenities</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- MOBILE SIDEBAR -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="rooms.html">Rooms</a></li>
+        <li><a href="amenities.html">Amenities</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+  </header>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="hero-content">
+      <h1>Our Rooms</h1>
+      <p>Discover the perfect space for your getaway at Don Elmer's</p>
+    </div>
+  </section>
+
+  <!-- FILTER SECTION -->
+  <section class="filter-section">
+    <div class="container">
+      <div class="filter-container">
+        <button class="filter-btn active" data-type="all">ALL</button>
+        <button class="filter-btn" data-type="room">ROOMS</button>
+        <button class="filter-btn" data-type="cottage">COTTAGES</button>
+        <button class="filter-btn" data-type="whole">WHOLE</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOMS SECTION -->
+  <section id="rooms-container" class="rooms-container">
+    <!-- Rooms will be loaded here by rooms.js -->
+  </section>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    // Mobile menu functionality
+    const hamburger = document.getElementById('hamburger');
+    const mobileSidebar = document.getElementById('mobileSidebar');
+    const overlay = document.getElementById('overlay');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileSidebar.classList.toggle('active');
+      overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileSidebar.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
+    document.querySelectorAll('.mobile-nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileSidebar.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+    });
+  </script>
+  <script type="module" src="js/room.js"></script>
+  <script type="module" src="js/rooms.js"></script>
+</body>
+</html>

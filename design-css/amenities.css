@@ -1,0 +1,393 @@
+/* --- 0. CSS Variables and Global Reset --- */
+:root {
+    --gold-color: #C8A951;
+    --gold-dark: #A88C3D;
+    --dark-text: #2c3e50;
+    --light-text: #555;
+    --background-light: #f9fafb;
+    --background-white: #fff;
+    --section-padding: 80px 0;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark-text);
+    background: var(--background-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* === HERO SECTION === */
+.page-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/image-amenities/resort_image.png') center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.page-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* === SECTION TITLES === */
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--dark-text);
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--light-text);
+    font-size: 1.1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--gold-color);
+}
+
+/* === AMENITIES CONTENT STYLES === */
+.amenities-page {
+    padding: var(--section-padding);
+}
+
+/* Primary Amenities Box Styling */
+.amenity-section {
+    padding: 30px 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.amenity-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.amenity-section .section-desc {
+    text-align: center;
+    max-width: 800px;
+    margin: 15px auto 30px auto;
+    padding: 25px 35px;
+    line-height: 1.5;
+    background-color: var(--background-white);
+    border: 1px solid var(--gold-color);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    color: var(--dark-text);
+}
+
+.amenity-section .food-heading-style {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--gold-color);
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* TWO-COLUMN ZIGZAG LAYOUT */
+.pool-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Default styles for each block (image or text) */
+.pool-block {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 350px;
+    text-align: center;
+}
+
+/* Image blocks specific styles */
+.pool-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.4s ease-out;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.pool-block img:hover {
+    transform: scale(1.03);
+}
+
+/* Text blocks specific styles */
+.pool-block.has-content {
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background-white);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.pool-block h3 {
+    font-size: 2rem;
+    color: var(--dark-text);
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+
+.pool-block p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--light-text);
+    text-align: center;
+}
+
+/* === SCROLL ANIMATION EFFECTS === */
+.fade-in, .slide-left, .slide-right {
+    opacity: 0;
+    transition: all 1.2s ease-out;
+}
+
+/* Slide from left */
+.slide-left {
+    transform: translateX(-60px);
+}
+
+/* Slide from right */
+.slide-right {
+    transform: translateX(60px);
+}
+
+/* When element becomes visible */
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* === FOOTER === */
+footer {
+    background: #1a1a1a;
+    color: #ddd;
+    padding: 70px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-column h3 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: white;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--gold-color);
+}
+
+.footer-column p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--gold-color);
+    padding-left: 5px;
+}
+
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.contact-info i {
+    color: var(--gold-color);
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #333;
+    color: white;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background: var(--gold-color);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* === RESPONSIVE STYLES === */
+@media (max-width: 992px) {
+    .pool-grid-container {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+        gap: 30px;
+    }
+
+    .pool-block {
+        height: auto;
+        min-height: 250px;
+        align-items: center;
+    }
+
+    .pool-block img {
+        height: 250px;
+    }
+
+    .pool-block.has-content {
+        text-align: center;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .pool-block h3, .pool-block p {
+        text-align: center;
+    }
+
+    .pool-block h3 {
+        font-size: 1.8rem;
+    }
+
+    .pool-block p {
+        font-size: 1rem;
+    }
+
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .amenity-section .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .page-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .pool-block img {
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Don Elmer's Inn and Resort | Luxury Getaway in Montalban</title>
+  <link rel="icon" type="image/png" href="/image-amenities/logo123.png">
+  <link rel="stylesheet" href="/design-css/index.css">
+  <link rel="stylesheet" href="design-css/topbar.css">
+  <meta name="description" content="Experience luxury and tranquility at Don Elmer's Inn and Resort in Montalban. Enjoy our premium accommodations, refreshing pools, and nature-inspired ambiance.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="top-navbar">
+      <div class="navbar-logo">
+        <a href="index.html" class="logo-link">
+          <img src="/imagelogo/logo.png" alt="Don Elmer's Logo" class="logo-image">
+          <span class="logo-text">Don Elmer's</span>
+        </a>
+      </div>
+      <nav class="nav-menu">
+        <ul class="nav-list">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="amenities.html">Amenities</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- MOBILE SIDEBAR -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+      <ul class="mobile-nav-list">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="amenities.html">Amenities</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Don Elmer's Inn and Resort</h1>
+      <p>Relax, unwind, and enjoy the peaceful beauty of Montalban surrounded by nature.</p>
+      <a href="rooms.html" class="btn">View Our Rooms</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Welcome to Don Elmer's Inn and Resort</h2>
+          <p>Nestled in the heart of Rodriguez (Montalban), Rizal, Don Elmer's Inn and Resort offers a perfect blend of luxury and nature. Our family-owned establishment provides a tranquil escape from the city's hustle, allowing you to reconnect with nature without compromising on comfort.</p>
+          <p>Whether you're planning a family vacation, a romantic getaway, or a corporate retreat, our dedicated team ensures your experience is nothing short of exceptional.</p>
+        </div>
+        <div class="image-collage">
+          <div class="collage-main">
+            <!-- REPLACE THIS IMAGE WITH YOUR OWN -->
+            <img src="IndexImage/Index1.png" alt="Don Elmer's Resort Pool Area">
+          </div>
+          <div class="collage-side-1">
+            <!-- REPLACE THIS IMAGE WITH YOUR OWN -->
+            <img src="IndexImage/Index3.png" alt="Don Elmer's Luxury Room">
+          </div>
+          <div class="collage-side-2">
+            <!-- REPLACE THIS IMAGE WITH YOUR OWN -->
+            <img src="IndexImage/Index2.png" alt="Don Elmer's Resort Garden">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOMS SHOWCASE -->
+  <section class="rooms">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Accommodations</h2>
+        <p>Discover our thoughtfully designed rooms and cottages, each offering a unique blend of comfort and style.</p>
+      </div>
+      <div id="rooms-container" class="rooms-grid">
+        <div class="loading">Loading accommodations...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>What We Offer</h2>
+        <p>Enhance your stay with our premium facilities designed for your comfort and enjoyment.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fa-solid fa-person-swimming feature-icon"></i>
+          <h3>Refreshing Pools</h3>
+          <p>Cool off and have fun in our clean, well-maintained pools designed for both kids and adults.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-bed feature-icon"></i>
+          <h3>Comfortable Rooms</h3>
+          <p>Cozy, air-conditioned rooms perfect for families, couples, or groups looking to relax.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-tree feature-icon"></i>
+          <h3>Nature Ambience</h3>
+          <p>Surrounded by trees and mountain air, our resort offers a peaceful break from city life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Don Elmer's</h3>
+          <p>Experience luxury surrounded by nature at our premier resort in Montalban, Rizal. Your perfect getaway awaits.</p>
+          <div class="social-links">
+            <!-- ✅ UPDATED: Facebook link only -->
+            <a href="https://www.facebook.com/profile.php?id=100083573612681" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="amenities.html">Amenities</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <ul class="contact-info">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Rodriguez (Montalban), Rizal, Philippines</span>
+            </li>
+            <li>
+              <!-- ✅ UPDATED: Phone number -->
+              <i class="fas fa-phone"></i>
+              <span>(09) 38 196 4481</span>
+            </li>
+            <li>
+              <!-- ✅ UPDATED: Email -->
+              <i class="fas fa-envelope"></i>
+              <span>donelmersresort@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Don Elmer's Inn and Resort. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING DOWNLOAD BUTTON -->
+  <div class="floating-download">
+  <a href="https://drive.google.com/file/d/1OAS7i59cfGMTJ3WcJpWXQ_0Z_A9rPGm0/view?usp=sharing" 
+     download="DonElmersApp" 
+     class="download-btn" 
+     id="downloadBtn">
+    <i class="fas fa-download"></i>
+    <span class="download-text">Download App</span>
+  </a>
+</div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+  <script type="module">
+    // Import Firebase from external file
+    import { db } from '/js/firebase.js';
+    import { ref, onValue } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+    // Fetch and display rooms
+    function fetchRooms() {
+        const roomsContainer = document.getElementById('rooms-container');
+        roomsContainer.innerHTML = '<div class="loading">Loading accommodations...</div>';
+
+        // Fetch from accommodations node
+        const accommodationsRef = ref(db, 'accommodations');
+        onValue(accommodationsRef, (snapshot) => {
+            const data = snapshot.val();
+            roomsContainer.innerHTML = '';
+            
+            console.log('Accommodations data:', data);
+
+            if (!data) {
+                roomsContainer.innerHTML = '<div class="loading">No accommodations found</div>';
+                return;
+            }
+
+            // Get the specific rooms by their IDs - Room 1, Cottage 1, Whole Resort
+            const roomIds = ['1', '5', '22']; // Room 1, Cottage 1, Whole Resort
+            let foundRooms = 0;
+
+            roomIds.forEach(id => {
+                if (data[id]) {
+                    console.log('Found room:', id, data[id]);
+                    const roomCard = createRoomCard(data[id]);
+                    roomsContainer.appendChild(roomCard);
+                    foundRooms++;
+                }
+            });
+
+            if (foundRooms === 0) {
+                const availableKeys = Object.keys(data).join(', ');
+                roomsContainer.innerHTML = `<div class="loading">Specific rooms not found. Available keys: ${availableKeys}</div>`;
+            }
+        }, (error) => {
+            console.error('Error fetching rooms:', error);
+            roomsContainer.innerHTML = `<div class="loading">Error: ${error.message}</div>`;
+        });
+    }
+
+    // Create room card HTML
+    function createRoomCard(room) {
+        const card = document.createElement('div');
+        card.className = 'room-card';
+
+        // Determine price display
+        let priceDisplay = 'Contact for pricing';
+        if (room.overnightPrice && room.overnightPrice > 0) {
+            priceDisplay = `₱${room.overnightPrice} / night`;
+        } else if (room.wholeResortPrice && room.wholeResortPrice > 0) {
+            priceDisplay = `₱${room.wholeResortPrice} / day`;
+        } else if (room.dayPrice && room.dayPrice > 0) {
+            priceDisplay = `₱${room.dayPrice} / day`;
+        }
+
+        card.innerHTML = `
+            <div class="room-image">
+                <img src="${room.image}" alt="${room.name}" onerror="this.src='https://via.placeholder.com/400x250?text=Image+Not+Found'">
+            </div>
+            <div class="room-content">
+                <h3>${room.name}</h3>
+                <div class="room-price">${priceDisplay}</div>
+                <p>${room.description || 'Experience comfort and relaxation in our well-appointed accommodation.'}</p>
+                <a href="contact.html" class="btn">Inquire Now</a>
+            </div>
+        `;
+
+        return card;
+    }
+
+    // Mobile menu functionality
+    const hamburger = document.getElementById('hamburger');
+    const mobileSidebar = document.getElementById('mobileSidebar');
+    const overlay = document.getElementById('overlay');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobileSidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileSidebar.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+
+    document.querySelectorAll('.mobile-nav-list a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            mobileSidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    });
+
+    // Fetch rooms when page loads
+    document.addEventListener('DOMContentLoaded', fetchRooms);
+  </script>
+</body>
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Details - Don Elmer's Inn and Resort</title>
+    <link rel="icon" type="image/png" href="/image-amenities/logo123.png">
+    <link rel="stylesheet" href="/design-css/roomdetails.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="top-navbar">
+                <div class="navbar-logo">
+                    <a href="index.html" class="logo-text">Don Elmer's</a>
+                </div>
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="amenities.html">Amenities</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </nav>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE SIDEBAR -->
+        <div class="mobile-sidebar" id="mobileSidebar">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="page-hero" id="hero-section">
+        <div class="hero-content">
+            <h1 id="hero-title">Room Details</h1>
+            <p id="hero-subtitle">Discover your perfect getaway experience</p>
+        </div>
+    </section>
+
+    <!-- ROOM DETAILS CONTENT -->
+    <main class="container page-content">
+        <div id="loading" class="loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading room details...</p>
+        </div>
+
+        <div id="error" class="error" style="display: none;">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Room not found or error loading details.</p>
+            <a href="rooms.html" class="back-btn">← Back to Rooms</a>
+        </div>
+
+        <div id="room-details-content" style="display: none;">
+            <div class="details-container">
+                <div class="room-image-section">
+                    <div class="room-main-image-container">
+                        <img id="room-image" src="" alt="Room Image" class="room-main-image">
+                    </div>
+                </div>
+                
+                <div class="room-info-section">
+                    <div class="room-header">
+                        <div id="status-badge" class="status-badge"></div>
+                        <h1 id="room-name" class="room-name"></h1>
+                        <div id="package-type" class="package-type"></div>
+                    </div>
+                    
+                    <p id="room-description" class="room-description"></p>
+                    
+                    <!-- CAPACITY SECTION -->
+                    <div id="capacity-section" class="capacity-section" style="display: none;">
+                        <h3 class="section-title">Capacity</h3>
+                        <div class="capacity-info">
+                            <i class="fas fa-users"></i>
+                            <span id="capacity-text"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- WHAT'S INCLUDED SECTION - ALWAYS SHOW THIS -->
+                    <div class="highlight-features">
+                        <h3 class="section-title">What's Included</h3>
+                        <div id="amenities-content">
+                            <!-- Content will be dynamically added here -->
+                        </div>
+                    </div>
+                    
+                    <div id="pricing-section" class="pricing-section">
+                        <h3 class="section-title">Pricing</h3>
+                        <div id="price-items" class="price-items"></div>
+                    </div>
+                    
+                    <!-- CTA SECTION -->
+                    <div class="action-section">
+                        <div class="cta-content">
+                            <h3>Ready to Experience Don Elmer's?</h3>
+                            <p>Contact us now to check availability and make your reservation</p>
+                            
+                            <div class="action-buttons">
+                                <button id="inquire-now-btn" class="inquire-now-btn">
+                                    <i class="fas fa-envelope"></i>
+                                    Inquire Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RELATED ROOMS -->
+            <section class="related-rooms">
+                <h2 class="section-title">You Might Also Like</h2>
+                <div class="rooms-carousel">
+                    <div class="room-suggestion">
+                        <div class="suggestion-image">
+                            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=300" alt="Family Room">
+                        </div>
+                        <h4>Family Suite</h4>
+                        <p>Perfect for family gatherings</p>
+                        <a href="rooms.html" class="view-room-btn">View Room</a>
+                    </div>
+                    <div class="room-suggestion">
+                        <div class="suggestion-image">
+                            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=300" alt="Cottage">
+                        </div>
+                        <h4>Private Cottage</h4>
+                        <p>Secluded and peaceful</p>
+                        <a href="rooms.html" class="view-room-btn">View Room</a>
+                    </div>
+                    <div class="room-suggestion">
+                        <div class="suggestion-image">
+                            <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=300" alt="Pool View">
+                        </div>
+                        <h4>Pool View Room</h4>
+                        <p>Stunning poolside views</p>
+                        <a href="rooms.html" class="view-room-btn">View Room</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Don Elmer's</h3>
+                    <p>Experience luxury surrounded by nature at our premier resort in Montalban, Rizal. Your perfect getaway awaits.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/DonElmersInnAndResort" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/DonElmersInn" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="amenities.html">Amenities</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Rodriguez (Montalban), Rizal, Philippines</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+63 917 123 4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@donelmers.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Don Elmer's Inn and Resort. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FIREBASE AND SCRIPT -->
+    <script type="module">
+        // Import Firebase modules and configuration from the external file
+        import { db } from '/js/firebase.js';
+        import { ref, get } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+
+        // Mobile Navigation
+        const hamburger = document.getElementById('hamburger');
+        const mobileSidebar = document.getElementById('mobileSidebar');
+        const overlay = document.getElementById('overlay');
+
+        function toggleSidebar() {
+            mobileSidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        hamburger.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-list a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', toggleSidebar);
+        });
+
+        // Room Details Logic
+        const urlParams = new URLSearchParams(window.location.search);
+        const roomId = urlParams.get('id');
+
+        let allRooms = [];
+
+        function formatPrice(price) {
+            const num = Number(price);
+            if (isNaN(num)) return "₱0";
+            return `₱${num.toLocaleString("en-PH")}`;
+        }
+
+        function renderPricing(room) {
+            const priceItems = document.getElementById('price-items');
+            priceItems.innerHTML = '';
+
+            if (room.type === 'whole') {
+                priceItems.innerHTML = `
+                    <div class="price-item">
+                        <span class="price-label">Whole Resort Package (24 Hours)</span>
+                        <span class="price-value">${formatPrice(room.wholeResortPrice)}</span>
+                    </div>
+                `;
+            } else {
+                priceItems.innerHTML = `
+                    <div class="price-item">
+                        <span class="price-label">Day Use (8:00 AM - 5:00 PM)</span>
+                        <span class="price-value">${formatPrice(room.dayPrice)}</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="price-label">Overnight Stay</span>
+                        <span class="price-value">${formatPrice(room.overnightPrice)}</span>
+                    </div>
+                `;
+            }
+        }
+
+        // Function to render capacity
+        function renderCapacity(room) {
+            const capacitySection = document.getElementById('capacity-section');
+            const capacityText = document.getElementById('capacity-text');
+            
+            if (room.capacity !== undefined && room.capacity !== null) {
+                capacityText.textContent = `Up to ${room.capacity} guests`;
+                capacitySection.style.display = 'block';
+            } else {
+                capacitySection.style.display = 'none';
+            }
+        }
+
+        // Function to render amenities - ALWAYS SHOWS THE SECTION
+        function renderAmenities(room) {
+            const amenitiesContent = document.getElementById('amenities-content');
+            
+            // Check if room has amenities array or features array
+            const hasAmenities = room.amenities && Array.isArray(room.amenities) && room.amenities.length > 0;
+            const hasFeatures = room.features && Array.isArray(room.features) && room.features.length > 0;
+            
+            if (hasAmenities || hasFeatures) {
+                const amenitiesList = hasAmenities ? room.amenities : room.features;
+                
+                amenitiesContent.innerHTML = `
+                    <div class="features-grid">
+                        ${amenitiesList.map(amenity => {
+                            // If amenity is an object with name property, use that, otherwise use the string
+                            const amenityName = typeof amenity === 'object' ? amenity.name : amenity;
+                            const amenityIcon = getAmenityIcon(amenityName);
+                            
+                            return `
+                                <div class="feature-card">
+                                    <i class="${amenityIcon}"></i>
+                                    <span>${amenityName}</span>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                `;
+            } else {
+                // Show message when no amenities available
+                amenitiesContent.innerHTML = `
+                    <div class="no-amenities-message">
+                        <i class="fas fa-info-circle"></i>
+                        <p>No amenities or inclusions available.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Helper function to get appropriate icons for amenities
+        function getAmenityIcon(amenityName) {
+            const amenity = amenityName.toLowerCase();
+            
+            if (amenity.includes('tv') || amenity.includes('television')) return 'fas fa-tv';
+            if (amenity.includes('wifi') || amenity.includes('internet')) return 'fas fa-wifi';
+            if (amenity.includes('bed') || amenity.includes('sleep')) return 'fas fa-bed';
+            if (amenity.includes('bath') || amenity.includes('shower')) return 'fas fa-bath';
+            if (amenity.includes('aircon') || amenity.includes('air conditioning') || amenity.includes('ac')) return 'fas fa-snowflake';
+            if (amenity.includes('kitchen') || amenity.includes('cooking')) return 'fas fa-utensils';
+            if (amenity.includes('pool') || amenity.includes('swimming')) return 'fas fa-swimming-pool';
+            if (amenity.includes('parking')) return 'fas fa-parking';
+            if (amenity.includes('view') || amenity.includes('scenic')) return 'fas fa-mountain';
+            if (amenity.includes('private') || amenity.includes('exclusive')) return 'fas fa-lock';
+            if (amenity.includes('garden')) return 'fas fa-seedling';
+            if (amenity.includes('terrace') || amenity.includes('balcony')) return 'fas fa-home';
+            
+            return 'fas fa-check-circle'; // default icon
+        }
+
+        // Function to get random rooms (excluding current room)
+        function getRandomRooms(currentRoomId, allRooms, count = 3) {
+            // Filter out the current room and inactive rooms
+            const availableRooms = allRooms.filter(room => 
+                room.id !== currentRoomId && room.status === 'Active'
+            );
+            
+            // Shuffle the array and get first 'count' items
+            const shuffled = [...availableRooms].sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+
+        // Function to render related rooms
+        function renderRelatedRooms(currentRoomId) {
+            const relatedRooms = getRandomRooms(currentRoomId, allRooms, 3);
+            const roomsCarousel = document.querySelector('.rooms-carousel');
+            
+            if (relatedRooms.length === 0) {
+                roomsCarousel.innerHTML = '<p>No other rooms available at the moment.</p>';
+                return;
+            }
+
+            roomsCarousel.innerHTML = relatedRooms.map(room => `
+                <div class="room-suggestion">
+                    <div class="suggestion-image">
+                        <img src="${room.image}" alt="${room.name}">
+                    </div>
+                    <h4>${room.name}</h4>
+                    <p>${room.packageType || 'Comfortable Accommodation'}</p>
+                    ${room.type === 'whole' ? 
+                        `<p class="room-price">${formatPrice(room.wholeResortPrice)} / 24hrs</p>` : 
+                        `<p class="room-price">From ${formatPrice(room.dayPrice)} / day</p>`
+                    }
+                    <a href="roomdetails.html?id=${room.id}" class="view-room-btn">View Room</a>
+                </div>
+            `).join('');
+        }
+
+        async function loadAllRooms() {
+            try {
+                const accRef = ref(db, "accommodations");
+                const snapshot = await get(accRef);
+
+                if (snapshot.exists()) {
+                    const data = snapshot.val();
+                    allRooms = Object.entries(data).map(([key, value]) => ({
+                        id: key,
+                        ...value
+                    }));
+                    return allRooms;
+                } else {
+                    console.log('No rooms found in database');
+                    return [];
+                }
+            } catch (error) {
+                console.error('Error loading rooms:', error);
+                return [];
+            }
+        }
+
+        async function loadRoomDetails() {
+            if (!roomId) {
+                showError('No room specified');
+                return;
+            }
+
+            try {
+                // Load all rooms first
+                await loadAllRooms();
+                
+                // Then load the specific room details
+                const roomRef = ref(db, `accommodations/${roomId}`);
+                const snapshot = await get(roomRef);
+
+                if (snapshot.exists()) {
+                    const room = snapshot.val();
+                    displayRoomDetails(room);
+                    
+                    // Render related rooms after main room is loaded
+                    renderRelatedRooms(roomId);
+                } else {
+                    showError('Room not found');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showError('Error loading room details');
+            }
+        }
+
+        function displayRoomDetails(room) {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('room-details-content').style.display = 'block';
+
+            // Update hero section
+            document.getElementById('hero-title').textContent = room.name;
+            document.getElementById('hero-subtitle').textContent = room.packageType || 'Premium Accommodation';
+
+            // Update room details
+            document.getElementById('room-image').src = room.image;
+            document.getElementById('room-name').textContent = room.name;
+            document.getElementById('package-type').textContent = room.packageType;
+            document.getElementById('room-description').textContent = room.description;
+
+            // Status badge
+            const statusBadge = document.getElementById('status-badge');
+            if (room.status === 'Active') {
+                statusBadge.textContent = 'Available';
+                statusBadge.className = 'status-badge status-available';
+            } else {
+                statusBadge.textContent = 'Unavailable';
+                statusBadge.className = 'status-badge status-unavailable';
+            }
+
+            // Render capacity and amenities
+            renderCapacity(room);
+            renderAmenities(room);
+            renderPricing(room);
+
+            // Inquire button
+            document.getElementById('inquire-now-btn').addEventListener('click', function() {
+                window.location.href = `contact.html?inquiry=${encodeURIComponent(room.name)}`;
+            });
+        }
+
+        function showError(message) {
+            document.getElementById('loading').style.display = 'none';
+            const errorDiv = document.getElementById('error');
+            errorDiv.style.display = 'block';
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', loadRoomDetails);
+    </script>
+</body>
+</html>
