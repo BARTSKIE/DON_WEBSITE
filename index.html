@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Don Elmer's Inn and Resort | Luxury Getaway in Montalban</title>
-  <link rel="icon" type="image/png" href="image-amenities/logo123.png">
-  <link rel="stylesheet" href="design-css/index.css">
+  <link rel="icon" type="image/png" href="/image-amenities/logo123.png">
+  <link rel="stylesheet" href="/design-css/index.css">
   <link rel="stylesheet" href="design-css/topbar.css">
   <meta name="description" content="Experience luxury and tranquility at Don Elmer's Inn and Resort in Montalban. Enjoy our premium accommodations, refreshing pools, and nature-inspired ambiance.">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     <div class="top-navbar">
       <div class="navbar-logo">
         <a href="index.html" class="logo-link">
-          <img src="imagelogo/logo.png" alt="Don Elmer's Logo" class="logo-image">
+          <img src="/imagelogo/logo.png" alt="Don Elmer's Logo" class="logo-image">
           <span class="logo-text">Don Elmer's</span>
         </a>
       </div>
@@ -70,12 +70,15 @@
         </div>
         <div class="image-collage">
           <div class="collage-main">
+            <!-- REPLACE THIS IMAGE WITH YOUR OWN -->
             <img src="IndexImage/Index1.png" alt="Don Elmer's Resort Pool Area">
           </div>
           <div class="collage-side-1">
+            <!-- REPLACE THIS IMAGE WITH YOUR OWN -->
             <img src="IndexImage/Index3.png" alt="Don Elmer's Luxury Room">
           </div>
           <div class="collage-side-2">
+            <!-- REPLACE THIS IMAGE WITH YOUR OWN -->
             <img src="IndexImage/Index2.png" alt="Don Elmer's Resort Garden">
           </div>
         </div>
@@ -131,6 +134,7 @@
           <h3>Don Elmer's</h3>
           <p>Experience luxury surrounded by nature at our premier resort in Montalban, Rizal. Your perfect getaway awaits.</p>
           <div class="social-links">
+            <!-- ✅ UPDATED: Facebook link only -->
             <a href="https://www.facebook.com/profile.php?id=100083573612681" target="_blank"><i class="fab fa-facebook-f"></i></a>
           </div>
         </div>
@@ -152,10 +156,12 @@
               <span>Rodriguez (Montalban), Rizal, Philippines</span>
             </li>
             <li>
+              <!-- ✅ UPDATED: Phone number -->
               <i class="fas fa-phone"></i>
               <span>(09) 38 196 4481</span>
             </li>
             <li>
+              <!-- ✅ UPDATED: Email -->
               <i class="fas fa-envelope"></i>
               <span>donelmersresort@gmail.com</span>
             </li>
@@ -170,14 +176,14 @@
 
   <!-- FLOATING DOWNLOAD BUTTON -->
   <div class="floating-download">
-    <a href="https://drive.google.com/file/d/1OAS7i59cfGMTJ3WcJpWXQ_0Z_A9rPGm0/view?usp=sharing" 
-       target="_blank"
-       class="download-btn" 
-       id="downloadBtn">
-      <i class="fas fa-download"></i>
-      <span class="download-text">Download App</span>
-    </a>
-  </div>
+  <a href="https://expo.dev/accounts/donelmers/projects/MyApp/builds/f3926b54-1692-47dc-bdbf-8fe1083d7102" 
+     download="DonElmersApp" 
+     class="download-btn" 
+     id="downloadBtn">
+    <i class="fas fa-download"></i>
+    <span class="download-text">Download App</span>
+  </a>
+</div>
 
   <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
@@ -185,7 +191,7 @@
 
   <script type="module">
     // Import Firebase from external file
-    import { db } from 'js/firebase.js';
+    import { db } from '/js/firebase.js';
     import { ref, onValue } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 
     // Fetch and display rooms
