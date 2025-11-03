@@ -743,3 +743,63 @@ footer {
     font-size: 0.9rem;
     margin-bottom: 15px;
 }
+/* === LOGO STYLES === */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 12px;
+}
+
+.logo-image {
+  height: 50px; /* Galing sa topbar.css */
+  width: auto;
+  transition: var(--transition);
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; /* Galing sa topbar.css */
+  font-weight: 700;
+  color: var(--dark-text);
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.logo-link:hover .logo-image {
+  transform: scale(1.1);
+}
+
+.logo-link:hover .logo-text {
+  color: var(--gold-color);
+}
+
+/* Para sa mobile devices - same responsive size ng topbar.css */
+@media (max-width: 768px) {
+  .logo-image {
+    height: 35px; /* Galing sa topbar.css */
+  }
+  
+  .logo-text {
+    font-size: 24px; /* Galing sa topbar.css */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+    height: 30px; /* Galing sa topbar.css */
+  }
+  
+  .logo-text {
+    font-size: 20px; /* Galing sa topbar.css */
+  }
+  
+  .logo-link {
+    gap: 8px;
+  }
+}
